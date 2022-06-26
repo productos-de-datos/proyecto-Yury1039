@@ -1,5 +1,7 @@
+from functools import partial
 import os
 import sys
+
 def create_data_lake():
     """Cree el data lake con sus capas.
 
@@ -23,10 +25,12 @@ def create_data_lake():
 
 
     """
-    raise NotImplementedError("Implementar esta función")
+   
+raise NotImplementedError("Implementar esta función")
+
 
 os.mkdir('data_lake')
-root_directory = r'C:\Users\57310\OneDrive\Documents\GitHub\proyecto-Yury1039\data_lake'
+root_directory = 'data_lake/'
 
 list = ["landing", "raw", "cleansed", "business"]
 
@@ -36,7 +40,7 @@ make_directory = partial(os.makedirs, exist_ok=True)
 for path_items in map(concat_root_path, list):
     make_directory(path_items)
 
-root_b = r'C:\Users\57310\OneDrive\Documents\GitHub\proyecto-Yury1039\data_lake\business'
+root_b = 'data_lake/business'
 list_b = ["reports", "figures", "features", "forecasts"]
 
 concat_root_path_b = partial(os.path.join, root_b)
@@ -45,7 +49,7 @@ make_directory = partial(os.makedirs, exist_ok=True)
 for path_items in map(concat_root_path_b, list_b):
     make_directory(path_items)
 
-root_r = r'C:\Users\57310\OneDrive\Documents\GitHub\proyecto-Yury1039\data_lake\business\reports'
+root_r = 'data_lake/business/reports'
 list_r = ["figures"]
 
 concat_root_path_r = partial(os.path.join, root_r)
@@ -56,7 +60,5 @@ for path_items in map(concat_root_path_r, list_r):
 
 if __name__ == "__main__":
     import doctest
-
-
 
     doctest.testmod()
