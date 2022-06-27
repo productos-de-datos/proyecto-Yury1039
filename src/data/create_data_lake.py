@@ -29,6 +29,9 @@ def create_data_lake():
 raise NotImplementedError("Implementar esta función")
 
 
+ raise NotImplementedError("Implementar esta función")
+
+
 os.mkdir('data_lake')
 root_directory = 'data_lake/'
 
@@ -41,7 +44,7 @@ for path_items in map(concat_root_path, list):
     make_directory(path_items)
 
 root_b = 'data_lake/business'
-list_b = ["reports", "figures", "features", "forecasts"]
+list_b = ["reports", "features", "forecasts"]
 
 concat_root_path_b = partial(os.path.join, root_b)
 make_directory = partial(os.makedirs, exist_ok=True)
@@ -60,5 +63,3 @@ for path_items in map(concat_root_path_r, list_r):
 
 if __name__ == "__main__":
     import doctest
-
-    doctest.testmod()
