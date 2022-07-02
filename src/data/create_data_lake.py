@@ -1,7 +1,3 @@
-from functools import partial
-import os
-import sys
-
 def create_data_lake():
     """Cree el data lake con sus capas.
 
@@ -24,42 +20,30 @@ def create_data_lake():
     ```
 
 
+    
     """
-   
-raise NotImplementedError("Implementar esta función")
+    #Creamos carpetas  usando la funcion mkdir del modulo os
+    import os
 
+    os.mkdir('./data_lake/')
+    parent_dir = 'data_lake/'
+    carpetas = ['landing', 'raw', 'cleansed', 'business']
+    [os.mkdir(os.path.join(parent_dir, c)) for c in carpetas]
+    parent_dir = 'data_lake/business/'
+    carpetas = ['reports', 'features', 'forecasts']
+    [os.mkdir(os.path.join(parent_dir, c)) for c in carpetas]
+    parent_dir = 'data_lake/business/reports/'
+    directory = 'figures'
+    os.mkdir(os.path.join(parent_dir, directory))
+    
 
- raise NotImplementedError("Implementar esta función")
+    #raise NotImplementedError("Implementar esta función")
 
-
-os.mkdir('data_lake')
-root_directory = 'data_lake/'
-
-list = ["landing", "raw", "cleansed", "business"]
-
-concat_root_path = partial(os.path.join, root_directory)
-make_directory = partial(os.makedirs, exist_ok=True)
-
-for path_items in map(concat_root_path, list):
-    make_directory(path_items)
-
-root_b = 'data_lake/business'
-list_b = ["reports", "features", "forecasts"]
-
-concat_root_path_b = partial(os.path.join, root_b)
-make_directory = partial(os.makedirs, exist_ok=True)
-
-for path_items in map(concat_root_path_b, list_b):
-    make_directory(path_items)
-
-root_r = 'data_lake/business/reports'
-list_r = ["figures"]
-
-concat_root_path_r = partial(os.path.join, root_r)
-make_directory = partial(os.makedirs, exist_ok=True)
-
-for path_items in map(concat_root_path_r, list_r):
-    make_directory(path_items)
 
 if __name__ == "__main__":
     import doctest
+
+    doctest.testmod()
+    create_data_lake()
+
+
