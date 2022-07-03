@@ -1,3 +1,8 @@
+    """
+    Documentación:
+    La funcionalidad de clean_data consiste en ordenar el Layout de las columnas y las filas de los archivos. Para ello, se crea una
+    dataframe en el que se transponen las filas a columnas.
+    """
 def clean_data():
     """Realice la limpieza y transformación de los archivos CSV.
 
@@ -13,11 +18,7 @@ def clean_data():
 
     """
     
-    """
-    Documentación:
-    La funcionalidad de clean_data consiste en ordenar el Layout de las columnas y las filas de los archivos. Para ello, se crea una
-    dataframe en el que se transponen las filas a columnas.
-    """
+    
 
     import pandas as pd
     import glob
