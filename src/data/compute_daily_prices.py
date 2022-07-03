@@ -1,8 +1,3 @@
-     """
-    Documentación:
-    La funcionalidad compute_daily_prices consiste computar el promedio de los precios por día, tomándolos del archivo precios-horarios.csv
-    """
-
 def compute_daily_prices():
     """Compute los precios promedios diarios.
 
@@ -17,7 +12,6 @@ def compute_daily_prices():
 
 
     """
-    
     import pandas as pd
 
     #Leemos la data limpia 
