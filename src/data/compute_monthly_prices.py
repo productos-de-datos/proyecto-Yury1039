@@ -1,3 +1,10 @@
+    """
+    Documentación:
+    La funcionalidad de compute_monthly_prices es calcular el promedio mensual del archivo precio-horarios.
+    Considerando que la data va desde 07/1995 hasta 04/2021, el número de meses incluídos en este periodo de
+    tiempo, suman 310; por lo tanto, los registros que se obtendran serán 310 (uno por cada mes).
+    """
+
 def compute_monthly_prices():
     """Compute los precios promedios mensuales.
 
@@ -13,12 +20,7 @@ def compute_monthly_prices():
 
     """
     
-     """
-    Documentación:
-    La funcionalidad de compute_monthly_prices es calcular el promedio mensual del archivo precio-horarios.
-    Considerando que la data va desde 07/1995 hasta 04/2021, el número de meses incluídos en este periodo de
-    tiempo, suman 310; por lo tanto, los registros que se obtendran serán 310 (uno por cada mes).
-    """
+   
     import pandas as pd
 
     #Leemos el archivo de datos limpios
