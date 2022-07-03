@@ -12,11 +12,17 @@ def clean_data():
 
 
     """
+    
+    """
+    Documentación:
+    La funcionalidad de clean_data consiste en ordenar el Layout de las columnas y las filas de los archivos. Para ello, se crea una
+    dataframe en el que se transponen las filas a columnas.
+    """
 
     import pandas as pd
     import glob
 
-    #Usamos la funcion glob para abrir el paquete de archivos con extension .csv
+    
     path_file = glob.glob(r'data_lake/raw/*.csv')
     li = []
 
@@ -25,10 +31,8 @@ def clean_data():
         df = pd.read_csv(filename, index_col=None, header=0)
         li.append(df) #Se adiciona cada archivo leido
     
-    #Obtenemos un dataframe con toda la data proveniente de los archivos raw, pero con las columas de
-    #Feche, H00, ..... H23
+    
     read_file = pd.concat(li, axis=0, ignore_index=True)
-    #print(read_file.tail())
     read_file = read_file[read_file["Fecha"].notnull()]
     
     #Sacamos la columna solo con las fechas
