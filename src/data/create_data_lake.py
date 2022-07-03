@@ -1,3 +1,7 @@
+   """
+    Documentación:
+    La funcionalidad de create_data_lake es la creación y jerarquía del directorio y sus carpetas.
+    """
 def create_data_lake():
     """Cree el data lake con sus capas.
 
@@ -22,10 +26,7 @@ def create_data_lake():
 
     
     """
-    """
-    Documentación:
-    La funcionalidad de create_data_lake es la creación y jerarquía del directorio y sus carpetas.
-    """
+   
     
     #Creamos carpetas  usando la funcion mkdir del modulo os
     import os
