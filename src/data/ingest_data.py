@@ -4,6 +4,13 @@ Módulo de ingestión de datos.
 
 """
 
+    """
+    Documentación:
+    La funcionalidad de ingest_data es descargar los archivos por año de los precios_bolsa_nacional. Estos archivos se descargan 
+    desde 1995 hasta 2021. Se debe tener presente que para los año 2016 y 2017 la extensión de los archivos cambia (xls); los demás
+    tiene extensión xlsx.
+    """
+
 
 def ingest_data():
     """Ingeste los datos externos a la capa landing del data lake.
@@ -14,13 +21,7 @@ def ingest_data():
 
     """
     
-    """
-    Documentación:
-    La funcionalidad de ingest_data es descargar los archivos por año de los precios_bolsa_nacional. Estos archivos se descargan 
-    desde 1995 hasta 2021. Se debe tener presente que para los año 2016 y 2017 la extensión de los archivos cambia (xls); los demás
-    tiene extensión xlsx.
-    """
-    
+       
     import requests
 
    
