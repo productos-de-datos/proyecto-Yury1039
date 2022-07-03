@@ -12,6 +12,12 @@ En luigi llame las funciones que ya creo.
 
 """
 
+"""
+Documentación:
+Este pipeline tiene como objetivo orquestar todas las funciones anteriormente realizadas, una vez se haya creado el datalake. 
+Es decir, que se ejecutan las funciones: ingest_data, transform_data, clean_data, compute_daily_prices and compute_monthly_prices. 
+"""
+
 import luigi
 from luigi import Task, LocalTarget
 
